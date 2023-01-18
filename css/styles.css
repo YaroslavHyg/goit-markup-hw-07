@@ -44,7 +44,7 @@ textarea{
 
 .container {
         max-width: 480px;
-        min-width: 428px;
+        /* min-width: 428px; */
         margin-left: auto;
         margin-right: auto;
         padding-left: 16px;
@@ -78,7 +78,7 @@ textarea{
         margin-left: 40px;
 }
 .h2 {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         color: #2E2F42;
@@ -100,13 +100,52 @@ textarea{
         margin-bottom: 8px;
         margin-top: 0px;
 }
+@media screen and (min-width: 768px){
+        .h3{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        color: #2E2F42;
+        }
+}
+
+@media screen and (min-width: 1440px){
+        .h3{
+                display: flex;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #2E2F42;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+        margin-top: 0px;
+        }
+}
 
 .p {
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         color: #434455;
         letter-spacing: 0.02em;
         margin: 0px;
+}
+
+
+@media screen and (min-width: 768px){
+        .p{
+                font-weight: 500;  
+        }
+}
+
+@media screen and (min-width: 1440px){
+        .p{
+                font-weight: 400; 
+        }
 }
 
 
@@ -273,6 +312,24 @@ textarea{
         letter-spacing: 0.02em;
         transition: var(--anim-fast);
 }
+
+@media screen and (min-width: 768px){
+        .adress-link{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+letter-spacing: 0.04em;
+
+/* SLATE */
+
+color: #434455;
+        }
+        
+}
 /* --------------HERO----------- */
 .hero { 
 
@@ -400,6 +457,7 @@ textarea{
         .content{
                 /* padding-top: 120px; */
                 padding: 120px 0px;
+                padding-bottom: 0px;
         }
 }
 
@@ -612,6 +670,7 @@ textarea{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        justify-content: center;
 }
 @media screen and (min-width: 768px){
         .client-list {
@@ -788,7 +847,7 @@ textarea{
 /* ----------FORM_FOOTER---------- */
 .form_field_footer{
         
-        width: 453px;
+        /* width: 453px; */
         /* height: 80px; */
         /* margin-top: 100px; */
         /* margin-left: 80px; */
@@ -815,9 +874,15 @@ textarea{
 }
 
 .label_footer{
-        /* width: 264px; */
+        
         width: 100%;
 }
+@media screen and (min-width: 768px){
+        .label_footer{
+                width: 264px; 
+        }
+}
+
 .form_input_footer{
         /* position: absolute; */
         /* width: 264px; */
@@ -838,7 +903,6 @@ textarea{
 }
 @media screen and (min-width: 768px){
         .form_input_footer{
-                position: absolute;
                 width: 264px;
         }
 }
@@ -889,7 +953,8 @@ textarea{
 @media screen and (min-width: 768px){
         .button_form_footer{
                 margin: 0;
-                margin-left: 268px;
+                margin-left: 24px;
+                margin-top: 40px;
         }
 }
 
@@ -1242,18 +1307,7 @@ textarea{
 
 /* mobile menu */
 
-.page-header {
-        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
-          0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-      }
-      
-      .page-header .container {
-        min-height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-      }
-      
+
       .menu {
         display: flex;
         padding: 0;
@@ -1285,12 +1339,12 @@ textarea{
         align-items: center;
         justify-content: center;
 
-
-        
+        transition: var(--anim-fast);
         margin-top: 16px;
         margin-left: 60%;
         padding: 0;
         background-color: transparent;
+
         cursor: pointer;
         border: none;
         border-radius: 50%;
@@ -1300,6 +1354,7 @@ textarea{
       @media (min-width: 768px) {
         .menu-toggle {
           display: none;
+          
         }
       }
       
@@ -1309,13 +1364,16 @@ textarea{
       }
       
       .menu-container {
+        display: flex;
+        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        padding: 32px;
-        background-color: #3f51b5;
+        padding: 40px;
+        padding-top: 80px;
+        background-color: #FFFFFF;
         z-index: 999;
       
         transform: translateX(100%);
@@ -1330,18 +1388,94 @@ textarea{
         position: absolute;
         top: 16px;
         right: 16px;
-        color: #fff;
+        color: #000000;
+        background: #E7E9FC;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 40px;
+        transition: var(--anim-fast);
+      }
+
+      .menu-toggle:hover,
+      .menu-toggle:focus{
+        background: #FFFFFF;
+        background: #404BBF;
       }
       
       .mobile-menu {
-        padding: 0;
-        margin: 0;
         list-style: none;
+        padding: 0;
+        margin-bottom: auto;
+      }
+
+      .mobile-menu:not(:last-child){
+        /* margin-bottom: 40px; */
+
       }
       
-      .mobile-menu .link {
+.mobile-menu .link {
         display: block;
-        padding: 10px;
-        color: #fff;
         text-decoration: none;
+        margin-bottom: 40px;
+        padding: 0;
+        color: #2E2F42;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+
+        transition: var(--anim-fast);
       }
+
+.mobile-menu .link:hover,
+.mobile-menu .link:focus{
+        color: #404BBF;
+      }
+
+.mobile{
+        justify-content: flex-start;
+        margin: 0;
+      }
+.mobile .position-list +.position-list{
+        margin-left: 40px;
+
+}
+.mobile-mail-style{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+}
+
+.mobile-adress-color{
+        list-style: none;
+        padding: 0;
+        transition: var(--anim-fast);
+}
+.mobile-adress-color{
+        margin-bottom: 48px;
+
+      }
+
+      
+.mobile-tel-style{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 40px;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        
+}
+.mobile-mail-link{
+        text-decoration: none;
+        color: #434455;
+}
+.mobile-tel-link{
+        text-decoration: none;
+        color: #4D5AE5;
+}
